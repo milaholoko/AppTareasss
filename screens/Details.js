@@ -9,7 +9,7 @@ export default function Details({ navigation, route }) {
   const idTask = route.params.id
 
   function editTask(description,id){
-    database.collection("Task").doc(id).update({description:description})
+    database.collection("Tasks").doc(id).update({description:description})
     navigation.navigate("Task")
   }
   return (
